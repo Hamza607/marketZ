@@ -1,0 +1,35 @@
+---
+title: Marketsz's Existing Customer First Login after Migration
+---
+
+sequenceDiagram
+    Actor Customer
+    Customer ->>+ LoginPage: Enter Credentials
+    LoginPage ->>+ Backend: Login(email/suite, password)
+    alt CredentilsMatch
+        Backend-->>-LoginPage: JWT Token
+        LoginPage-->>Customer: JWT Token
+    else Credentials Do NOT Match
+        Backend-->>LoginPage: Invalid Credentials
+        LoginPage-->>Customer: Invalid Credentials
+    else Password NOT Set 
+        Backend-->>Backend: Retrieve Customer's Email address and generate OTP
+        Backend-->>Customer: SendOTPViaEmail(OTP)
+        Backend-->>LoginPage: OTP Sent
+        LoginPage-->>-Customer: Redirect to location /otp?token=...
+        Customer->>+OTPPage: OTP
+        alt OTP is Valid 
+            OTPPage -->> Customer: Redirect to location /password
+            Customer ->>+ NewPasswordPage: 
+            NewPasswordPage-->>Customer: JWT Token
+        else OTP is NOT Valid 
+            OTPPage -->> Customer: Invalid OTP 
+        end 
+        
+    end
+    Customer->>+MyAccount: JWT Token
+    alt IsTokenValid?
+        MyAccount-->>Customer: Access Granted!
+    else Token Is Invalid 
+        MyAccount-->>-Customer: Access Denied!
+    end

@@ -1,0 +1,221 @@
+@keyframes suMascotAnimation {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.su-mascot {
+  animation-name: suMascotAnimation;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-fill-mode: both;
+}
+@keyframes suMascotAnimation2 {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.su-mascot2 {
+  animation-name: suMascotAnimation2;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-fill-mode: both;
+}
+@keyframes suPackageDropAnimation {
+  0% {
+    top: -5%;
+    transform: scale(0.2);
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: scale(0.4);
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+    transform: scale(0.5);
+  }
+  60% {
+    transform: rotate(-10deg);
+    transform: scale(0.6);
+  }
+  80% {
+    top: 60%;
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.su-package {
+  position: relative;
+  animation-name: suPackageDropAnimation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes suPackageDropAnimation2 {
+  0% {
+    top: 20%;
+    transform: scale(0.5);
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: scale(0.5);
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+    transform: scale(0.5);
+  }
+  60% {
+    transform: rotate(-10deg);
+    transform: scale(0.5);
+  }
+  80% {
+    top: 80%;
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.su-package2 {
+  position: relative;
+  animation-name: suPackageDropAnimation2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.su-aero-plane {
+  animation: floatAnimationLoginPage linear infinite 2s;
+}
+@keyframes floatAnimationLoginPage {
+  0% {
+    transform: translateY(0) rotate(10deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(10deg);
+  }
+}
+.hero-black-crow {
+  animation: crowAnimation 3s linear infinite;
+}
+
+@keyframes crowAnimation {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(5px) scaleX(0.2) scaleY(0.8);
+  }
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+.rotating-box {
+  animation: rotateAnimation 2s linear alternate infinite;
+}
+@keyframes rotatecircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-circle {
+  animation: rotatecircle 2s linear infinite;
+}
+
+.slide-track {
+  width: calc(150px * 45);
+  animation: scroll1 25s linear infinite;
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-150px * 10));
+  }
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes truckMove {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.forklift-machine-img {
+  position: relative;
+  animation:
+    truckMove 15s linear infinite,
+    floatAnimation 0.2s linear infinite;
+}
+
+.cu-illustration {
+  position: relative;
+  animation: floatAnimation2 3s linear infinite;
+}
+
+@keyframes floatAnimation2 {
+  0%,
+  100% {
+    top: 10px;
+    transform: rotate(2deg);
+  }
+  50% {
+    top: 40px;
+    transform: rotate(-2deg);
+  }
+}
