@@ -11,9 +11,10 @@ interface RowData {
 
 interface TableProps {
   tableData: RowData[];
+  selectedRow:any
   setSelectedRow: (rowData: RowData) => void;
 }
-const Table: React.FC<TableProps> = ({ tableData, setSelectedRow }) => {
+const Table: React.FC<TableProps> = ({ tableData, setSelectedRow,selectedRow }) => {
   const handleRowClick = (rowData: RowData) => {
     setSelectedRow(rowData);
   };

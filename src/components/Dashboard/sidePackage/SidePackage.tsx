@@ -5,7 +5,7 @@ import Table from "./Table";
 import TableDetail from "./TableDetail";
 const SidePackage = () => {
   const [selectState, setSelectState] = useState("usa");
-  const [selectedRow, setSelectedRow] = useState(null);
+  const [selectedRow, setSelectedRow] = useState<any>(null);
   const tableData = [
     {
       from: "Google",
