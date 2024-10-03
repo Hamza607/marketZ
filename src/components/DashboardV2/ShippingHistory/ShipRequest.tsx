@@ -367,7 +367,7 @@ const ShipRequest = () => {
                   />
                   <Image
                     src={dotline}
-                    alt=""
+                    alt="dot line icon"
                     width={20}
                     height={20}
                     className="w-[93%] left-3 absolute top-[54%]"
