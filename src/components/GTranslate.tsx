@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 export default function GTranslate() {
   useEffect(() => {
-    window.gtranslateSettings = {
+    (window as any).gtranslateSettings = {
       default_language: "en",
       native_language_names: true,
       detect_browser_language: true,

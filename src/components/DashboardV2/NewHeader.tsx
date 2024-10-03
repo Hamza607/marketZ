@@ -20,8 +20,9 @@ import {
 } from "../ui/select";
 interface NewHeaderProps {
   setHeaderLink: (link: string) => void;
+  headerLink:any
 }
-const NewHeader: React.FC<NewHeaderProps> = ({ setHeaderLink }) => {
+const NewHeader: React.FC<NewHeaderProps> = ({ setHeaderLink,headerLink }) => {
   return (
     <>
       <div className="p-4 border flex justify-between bg-white items-center ">
