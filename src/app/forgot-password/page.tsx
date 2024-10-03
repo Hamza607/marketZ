@@ -67,7 +67,11 @@ export default function ForgotPassword() {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="email" {...field} />
+                  <Input
+                    placeholder="email"
+                    {...field}
+                    value={field.value ?? ""}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -80,7 +84,11 @@ export default function ForgotPassword() {
               <FormItem>
                 <FormLabel>Suite number</FormLabel>
                 <FormControl>
-                  <Input placeholder="suite number" {...field} />
+                  <Input
+                    placeholder="suite number"
+                    {...field}
+                    value={field.value ?? ""}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
