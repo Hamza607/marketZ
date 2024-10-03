@@ -404,9 +404,9 @@ const SingUp = () => {
                     />
                   </div>
                   {form.formState.errors.year && (
-                    <FormMessage className="text-xs m-0 p-0">
-                      {form.formState.errors.year?.month?.day?.message}
-                    </FormMessage>
+                     <FormMessage className="text-xs m-0 p-0">
+                     {form.formState.errors.month?.message}
+                   </FormMessage>
                   )}
 
                   <FormField
