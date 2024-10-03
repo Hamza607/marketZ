@@ -23,7 +23,7 @@ export default function Error({
         {error.message}
       </span>
       <p className="block text-gray-500 md:text-xl/relaxed xl:text-base/relaxed dark:text-gray-400">
-        Don't worry, our team has been notified and we'll get this fixed as soon
+        Don&apos;t worry, our team has been notified and we&apos;ll get this fixed as soon
         as possible.
       </p>
       <Button variant={"outline"} onClick={() => reset()}>
